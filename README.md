@@ -57,7 +57,7 @@ def main():
         print('0 - Sair')
         
  # Pede ao utilizador para escolher a localização
- opcao = input('Introduza o local: ').strip().upper()[0]
+ opcao = int(input('Introduza o local: ').strip().upper()[0]
         
   # Se a opção for 0, termina o programa
   if opcao == 0:
