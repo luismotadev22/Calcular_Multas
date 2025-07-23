@@ -56,36 +56,36 @@ def main():
         print('3 - Autoestrada')
         print('0 - Sair')
         
-  # Pede ao utilizador para escolher a localização
- opcao = int(input('Introduza o local: '))
-       
+ # Pede ao utilizador para escolher a localização
+ opcao = input('Introduza o local: ').strip().upper()[0]
+        
   # Se a opção for 0, termina o programa
   if opcao == 0:
             print('Programa encerrado.')
             break
         
-# Pede ao utilizador a velocidade do veículo
+  # Pede ao utilizador a velocidade do veículo
  velocidade = int(input('Introduza a velocidade do veículo (km/h): '))
         
  # Variável para guardar a multa
- multa = 0
-        
+  multa = 0
+    
  # Decide qual função usar conforme a escolha do utilizador
- if opcao == 1:
-           multa = calcular_multa_localidade(velocidade)
+  if opcao == 1:
+            multa = calcular_multa_localidade(velocidade)
         elif opcao == 2:
             multa = calcular_multa_fora_localidade(velocidade)
         elif opcao == 3:
             multa = calcular_multa_autoestrada(velocidade)
-        else:
-            print('Opção inválida!')
+       else:
+          print('Opção inválida!')
             continue
         
- # Mostra a multa (ou indica que não há multa)
- if multa == 0:
-           print('Não há multa a pagar.')
+   # Mostra a multa (ou indica que não há multa)
+  if multa == 0:
+          print('Não há multa a pagar.')
     else:
-            print(f'Multa a pagar: {multa}€')
+           print(f'Multa a pagar: {multa}€')
 
 # Ponto de entrada do programa
 if __name__ == '__main__':
